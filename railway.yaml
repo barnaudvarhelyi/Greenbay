@@ -1,4 +1,4 @@
 version: 1
 commands:
   - name: Deploy
-    command: npm install && npm run start
+    command: npm install && npm run build

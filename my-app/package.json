@@ -7,23 +7,20 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.4.0",
-    "concurrently": "^8.2.0",
-    "node-modules": "^0.0.1",
+    "node-modules": "^1.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.10.0",
-    "react-scripts": "^2.1.3",
+    "react-scripts": "5.0.1",
     "sass": "^1.62.1",
     "swiper": "^9.3.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "develop": "concurrently \"react-scripts start\" \" nodemon ./src/services/server.js\"",
-    "start": "concurrently \"react-scripts start\" \" node ./src/services/server.js\"",
-    "build": "CI=false react-scripts build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "seeds": "node ./src/services/seeds/index.js"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [

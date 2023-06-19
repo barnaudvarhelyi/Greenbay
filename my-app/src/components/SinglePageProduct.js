@@ -12,7 +12,7 @@ export default function SingleProduct(props){
 
     /* When the user clicks on a product, it collects that product's data and saves it to productPage state */
     async function singlePageProduct(){
-        const res = await fetch(`https://greenbaybackend-production.up.railway.app/products/${productId}`)
+        const res = await fetch(`http://localhost:8080/products/${productId}`)
         const data = await res.json()
         setProductPage(data)
         document.title = `${data.name} | Greenbay`

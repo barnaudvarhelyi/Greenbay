@@ -32,7 +32,7 @@ function App() {
   function login(e){
     e.preventDefault()
 
-    fetch('https://greenbaybackend-production.up.railway.app/login', {
+    fetch('http://localhost:8080/login', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json'
@@ -63,7 +63,7 @@ function App() {
 
   async function register(e){
     e.preventDefault()
-    const res = await fetch('https://greenbaybackend-production.up.railway.app/register', {
+    const res = await fetch('http://localhost:8080/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -85,7 +85,7 @@ function App() {
   const [products, setProducts] = useState()
 
   async function displayAllProducts(){
-    const res = await fetch('https://greenbaybackend-production.up.railway.app/products/all')
+    const res = await fetch('http://localhost:8080/products/all')
     const data = await res.json()
     setProducts(data)
     document.title = 'Greenbay'
@@ -97,7 +97,7 @@ function App() {
   async function search(){
     const searchBar = document.querySelector('.search-bar').value
     const sortOptions = document.querySelector('#sort-options').value
-    const res = await fetch(`https://greenbaybackend-production.up.railway.app/search?keyword=${searchBar}&sort=${sortOptions}`)
+    const res = await fetch(`http://localhost:8080/search?keyword=${searchBar}&sort=${sortOptions}`)
     const data = await res.json()
     setSearchResult(data)
   }
@@ -106,7 +106,7 @@ function App() {
   const [userProfile, setUserProfile] = useState()
 
   async function displayProfileInformation(){
-    const res = await fetch('https://greenbaybackend-production.up.railway.app/profile', {
+    const res = await fetch('http://localhost:8080/profile', {
       headers: {
           'Authorization': `Bearer ${localStorage.getItem("token")}`
       }
@@ -118,7 +118,7 @@ function App() {
 
   /* Updating balance section */
   async function uploadFunds(fund){
-    const res = await fetch('https://greenbaybackend-production.up.railway.app/balance', {
+    const res = await fetch('http://localhost:8080/balance', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json',
@@ -132,7 +132,7 @@ function App() {
 
   /* Purchase item */
   async function purchase(productId){
-    const res = await fetch(`https://greenbaybackend-production.up.railway.app/purchase?productId=${productId}`, {
+    const res = await fetch(`http://localhost:8080/purchase?productId=${productId}`, {
       method: 'POST',
       headers: {
           'Content-Type': 'application/json',
@@ -146,7 +146,7 @@ function App() {
   /* Place a bid */
   async function placeBid(productId){
     const bidAmount = document.getElementById('bidAmount').value
-    const res = await fetch(`https://greenbaybackend-production.up.railway.app/bid?productId=${productId}`, {
+    const res = await fetch(`http://localhost:8080/bid?productId=${productId}`, {
       method: 'POST',
       headers: {
           'Content-Type': 'application/json',

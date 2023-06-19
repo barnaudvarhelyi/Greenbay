@@ -10,7 +10,7 @@ export default function UploaderProfile(props){
 
   /* When the user clicks on the uploaders name, it collects that user's data and saves it to uploaderProfile state */
   async function displayUploader(){
-    const res = await fetch(`http://localhost:8080/user-profile/${username}`)
+    const res = await fetch(`https://greenbaybackend-production.up.railway.app/user-profile/${username}`)
     const data = await res.json()
     setUploaderProfile(data)
   }

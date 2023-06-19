@@ -1,0 +1,36 @@
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+node_modules/
+
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Testing
+coverage/
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swx
+*.swpx
+*.swm
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Cache and temporary files
+.cache/
+*.tmp
+*.temp
+*.bak

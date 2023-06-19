@@ -1,0 +1,791 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.cdnfonts.com/css/black-jack");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
+  -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important;
+  outline: none !important;
+}
+
+body {
+  color: #2E2E2E;
+  font-family: "Montserrat";
+}
+
+a {
+  color: #2E2E2E;
+  text-decoration: none;
+  outline: none;
+}
+
+.error-message {
+  color: red;
+  background-color: rgba(255, 0, 0, 0.13);
+  padding: 1em;
+  margin-top: 1em;
+}
+
+/* Home Page */
+.sort-items {
+  max-width: 1100px;
+  margin: auto;
+  padding: 1em;
+}
+.sort-items select {
+  padding: 0.5em;
+  cursor: pointer;
+}
+
+/* Login Page */
+.login {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  gap: 1em;
+  max-width: 1200px;
+  margin: auto;
+}
+.login div {
+  height: 80%;
+  width: 50%;
+  padding: 1em;
+  text-align: center;
+}
+.login .login-form {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.login .login-form h1 {
+  font-size: 2em;
+  padding: 1em 0em;
+  font-family: "Blackjack";
+}
+.login .login-form form {
+  padding: 3em 0em;
+  display: flex;
+  flex-direction: column;
+}
+.login .login-form form input {
+  font-size: 1em;
+  background-color: transparent;
+  padding: 0.5em;
+  border: none;
+  border-bottom: 2px solid #D3D3D3;
+  outline: none;
+  margin-bottom: 3em;
+}
+.login .login-form form input::-moz-placeholder {
+  color: #2E2E2E;
+}
+.login .login-form form input::placeholder {
+  color: #2E2E2E;
+}
+.login .login-form form input:last-of-type {
+  margin-bottom: 1em;
+}
+.login .login-form form button {
+  background-color: black;
+  color: white;
+  padding: 1em;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  margin-bottom: 0.5em;
+}
+.login .login-form form span {
+  cursor: pointer;
+}
+.login .login-header {
+  width: 70%;
+  background-image: url("https://img.freepik.com/free-vector/computer-login-concept-illustration_114360-7962.jpg?w=2000");
+  background-size: cover;
+}
+.login #registerForm {
+  display: none;
+}
+
+/* Navbar */
+nav {
+  height: 80px;
+  color: #FAF9F6;
+  background-color: #2E8B57;
+}
+nav .container {
+  max-width: 1100px;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav a {
+  color: #FAF9F6;
+}
+nav h5 {
+  margin-left: auto;
+  margin-right: 1em;
+  font-weight: 100;
+}
+nav .search-bar {
+  padding: 0.5em;
+  border: none;
+  border-radius: 1em;
+  width: 40%;
+}
+
+/* Product */
+.products {
+  max-width: 1100px;
+  margin: auto;
+  padding: 1em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1em;
+  text-align: center;
+}
+.products .product {
+  width: 100%;
+  position: relative;
+}
+.products .product .delete-btn {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  color: #FF2E2E;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0.5em;
+}
+.products .product .edit-btn {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #8A8A8A;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0.5em;
+}
+.products .product .product-img {
+  position: relative;
+  width: 100%;
+  height: 310px;
+}
+.products .product .product-img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.products h3 {
+  margin: 0.5em 0em;
+  white-space: pre;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.products h4 {
+  margin-bottom: 0.25em;
+}
+
+/* Profile Page */
+.profile .container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 1em;
+}
+.profile .balance {
+  margin-bottom: 1em;
+  padding: 0.5em 1em;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 1em;
+  color: #FAF9F6;
+  background-color: #2E8B57;
+}
+.profile .profile-text h1 {
+  margin-top: 1em;
+}
+.profile .profile-text i {
+  margin-right: 0.3em;
+}
+.profile .profile-text button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #8A8A8A;
+}
+.profile form {
+  display: none;
+  flex-direction: column;
+}
+.profile form .upload-product .input-fields {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  gap: 0em 1em;
+}
+.profile form .upload-product .auction {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  gap: 0em 1em;
+}
+.profile form .input-fields input {
+  font-size: 1em;
+  padding: 0.75em;
+  border: none;
+  border-bottom: 2px solid #aaaaaa;
+  border-radius: 0.75em 0.75em 0em 0em;
+  width: 100%;
+  background-color: #eeeeee;
+  outline: none;
+  margin-bottom: 1em;
+}
+.profile form .input-fields input::-moz-placeholder {
+  color: #2E2E2E;
+}
+.profile form .input-fields input::placeholder {
+  color: #2E2E2E;
+}
+.profile form .input-fields input:last-of-type {
+  margin-bottom: 1em;
+}
+.profile form .button-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 1em;
+}
+.profile form .button-container button {
+  background-image: linear-gradient(to right, #c2e59c 0%, #64b3f4 51%, #c2e59c 100%);
+  background-size: 200% auto;
+  transition: 0.5s;
+  color: #FAF9F6;
+  padding: 1em;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1em;
+  width: 45%;
+  margin: auto;
+}
+.profile form .button-container button:hover {
+  background-position: right center;
+}
+.profile form .button-container button:nth-of-type(1) {
+  background-image: linear-gradient(to right, #D66D75 0%, #E29587 51%, #D66D75 100%);
+  background-size: 200% auto;
+  transition: 0.5s;
+}
+.profile form .expiresAt, .profile form #startingPrice {
+  font-size: 1em;
+  padding: 0.75em;
+  border: none;
+  border-bottom: 2px solid #aaaaaa;
+  border-radius: 0.75em 0.75em 0em 0em;
+  width: 100%;
+  background-color: #eeeeee;
+  outline: none;
+  margin-bottom: 1em;
+  cursor: pointer;
+}
+.profile form .expiresAt::-moz-placeholder, .profile form #startingPrice::-moz-placeholder {
+  color: #2E2E2E;
+}
+.profile form .expiresAt::placeholder, .profile form #startingPrice::placeholder {
+  color: #2E2E2E;
+}
+.profile form .error-message {
+  margin-top: 0em;
+  margin-bottom: 1em;
+}
+.profile form #startingPrice {
+  display: none;
+}
+.profile form #checkboxBidding {
+  margin-bottom: 1em;
+  margin-left: 0.5em;
+  cursor: pointer;
+}
+.profile .add-item-animation {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1em;
+  color: #FAF9F6;
+  cursor: pointer;
+  gap: 1em;
+}
+.profile .add-item-animation div {
+  background-color: red;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 1em;
+  background-image: linear-gradient(to right, #1D976C 0%, #93F9B9 51%, #1D976C 100%);
+  transition: 0.5s;
+  background-size: 200% auto;
+}
+.profile .add-item-animation div:last-of-type {
+  background-image: linear-gradient(to right, #4CB8C4 0%, #3CD3AD 51%, #4CB8C4 100%);
+}
+.profile .add-item-animation div:hover {
+  background-position: right center; /* change the direction of the change here */
+}
+.profile .add-item-animation button {
+  background-color: transparent;
+  border: none;
+  font-size: 2em;
+}
+.profile .add-funds {
+  height: 300px;
+  display: none;
+  gap: 1em;
+  color: #FAF9F6;
+}
+.profile .add-funds div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(to right, #78ffd6 0%, #007991 51%, #78ffd6 100%);
+  transition: 0.5s;
+  background-size: 200% auto;
+  border-radius: 1em;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+.profile .add-funds div:nth-of-type(2) {
+  background-image: linear-gradient(to right, #0ABFBC 0%, #FC354C 51%, #0ABFBC 100%);
+}
+.profile .add-funds div:nth-of-type(3) {
+  background-image: linear-gradient(to right, #DC2424 0%, #4A569D 51%, #DC2424 100%);
+}
+.profile .add-funds div:hover {
+  background-position: right center; /* change the direction of the change here */
+}
+.profile .cancel-fund {
+  display: none;
+  cursor: pointer;
+  margin-top: 1em;
+  color: #696969;
+}
+.profile .alert-overlay {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  opacity: 0.3;
+  display: none;
+}
+.profile .funds-alert {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 0.5em;
+  text-align: center;
+  padding: 1em;
+  z-index: 3;
+  display: none;
+}
+.profile .funds-alert button {
+  margin-left: 1em;
+  padding: 0.5em;
+  border: none;
+  border-radius: 0.5em;
+  margin-top: 0.5em;
+  cursor: pointer;
+}
+.profile .funds-alert .cancel {
+  background-color: #FF4C4C;
+  color: white;
+}
+.profile .funds-alert .confirm {
+  background-color: #2E8B57;
+  color: #FAF9F6;
+}
+.profile .delete-alert {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 0.5em;
+  text-align: center;
+  padding: 1em;
+  z-index: 3;
+  display: none;
+}
+.profile .delete-alert button {
+  margin-left: 1em;
+  padding: 0.5em;
+  border: none;
+  border-radius: 0.5em;
+  margin-top: 0.5em;
+  cursor: pointer;
+}
+.profile .delete-alert .cancel {
+  background-color: #FF4C4C;
+  color: white;
+}
+.profile .delete-alert .confirm {
+  background-color: #2E8B57;
+  color: #FAF9F6;
+}
+.profile .products {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.profile .products .product {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+  padding: 1em;
+  transition: all 0.1s ease-in;
+}
+.profile .products .product:hover {
+  transform: scale(105%);
+}
+.profile .products .product .product-img {
+  height: 200px;
+}
+.profile #editItem {
+  display: none;
+}
+.profile .expiresAt {
+  display: none;
+}
+.profile .show-more-container {
+  text-align: center;
+  margin-bottom: 1em;
+}
+.profile .show-more-container button {
+  color: #FAF9F6;
+  background-color: #2E8B57;
+  padding: 0.75em;
+  border: none;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+.profile .logout {
+  color: white;
+  background-color: #FF4C4C;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 1em;
+  cursor: pointer;
+}
+.profile table {
+  width: 100%;
+  margin-bottom: 1em;
+}
+.profile table th {
+  color: #FAF9F6;
+  background-color: #2E8B57;
+  padding: 0.5em;
+}
+.profile table td {
+  background-color: rgba(46, 139, 87, 0.3);
+  text-align: center;
+  padding: 0.2em;
+}
+.profile .empty-products, .profile .empty-bids {
+  height: 200px;
+  background-color: rgba(128, 128, 128, 0.2);
+  border-radius: 1em;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Single Page Product Page */
+.single-product {
+  max-width: 1100px;
+  margin: auto;
+  padding: 1em;
+  color: #2E2E2E;
+}
+.single-product .purchase-alert {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 0.5em;
+  text-align: center;
+  padding: 1em;
+  z-index: 3;
+  display: none;
+}
+.single-product .purchase-alert button {
+  margin-left: 1em;
+  padding: 0.5em;
+  border: none;
+  border-radius: 0.5em;
+  margin-top: 0.5em;
+  cursor: pointer;
+}
+.single-product .purchase-alert .cancel {
+  background-color: #FF4C4C;
+  color: white;
+}
+.single-product .purchase-alert .confirm {
+  background-color: #2E8B57;
+  color: #FAF9F6;
+}
+.single-product .alert-overlay {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  opacity: 0.3;
+  display: none;
+}
+.single-product .bidding-alert {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 0.5em;
+  text-align: center;
+  padding: 1em;
+  z-index: 3;
+  display: none;
+}
+.single-product .bidding-alert button {
+  margin-left: 1em;
+  padding: 0.5em;
+  border: none;
+  border-radius: 0.5em;
+  margin-top: 0.5em;
+  cursor: pointer;
+}
+.single-product .bidding-alert .cancel {
+  background-color: #FF4C4C;
+  color: white;
+}
+.single-product .bidding-alert .confirm {
+  background-color: #2E8B57;
+  color: #FAF9F6;
+}
+.single-product .product-informations {
+  display: flex;
+  gap: 1em;
+}
+.single-product .product-img {
+  width: 100%;
+}
+.single-product .product-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.single-product .description {
+  width: 10rem;
+}
+.single-product p {
+  text-align: justify;
+  margin-bottom: 0.5em;
+}
+.single-product h1 {
+  margin: 0.5em 0em;
+}
+.single-product h3 {
+  margin-bottom: 0.5em;
+}
+.single-product img {
+  height: 500px;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.single-product .user-link {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+.single-product .bidding-section {
+  display: flex;
+  margin-bottom: 0.5em;
+}
+.single-product .bidding-section input {
+  width: 70%;
+}
+.single-product .bidding-section button {
+  width: 30%;
+}
+.single-product .bidding-btn, .single-product .purchase-btn {
+  color: #FAF9F6;
+  background-color: #2E8B57;
+  border: none;
+  border-radius: 0.5em;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  width: 15em;
+  margin-bottom: 1em;
+}
+.single-product .bidding-btn {
+  height: 100%;
+}
+.single-product #bidAmount {
+  margin: 0em 0.5em 0.5em 0em;
+  border-radius: 0.5em;
+  border: 1px solid #2E2E2E;
+  background-color: #FAF9F6;
+  height: 100%;
+  padding: 0.5em;
+}
+.single-product .bidding-btn {
+  color: #FAF9F6;
+  background-color: #2E8B57;
+  border: none;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+.single-product .swiper {
+  margin-top: 1em;
+}
+.single-product .swiper div {
+  width: 100%;
+  text-align: center;
+  min-width: 0;
+}
+.single-product .swiper img {
+  height: 200px;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.single-product .swiper h3 {
+  margin: 0.5em 0em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Uploader's Page */
+.uploader-profile {
+  max-width: 1200px;
+  margin: auto;
+}
+.uploader-profile .products {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 0em;
+  margin-bottom: 0.5em;
+}
+.uploader-profile .products .product {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+  padding: 1em;
+  transition: all 0.1s ease-in;
+}
+.uploader-profile .products .product:hover {
+  transform: scale(105%);
+}
+.uploader-profile .products .product .product-img {
+  height: 200px;
+}
+.uploader-profile h1, .uploader-profile h4 {
+  text-align: center;
+}
+.uploader-profile h4 {
+  margin-bottom: 1em;
+}
+.uploader-profile h3 {
+  margin-bottom: 0.5em;
+}
+
+@media (max-width: 500px) {
+  /* Login section */
+  .login {
+    flex-direction: column;
+  }
+  .login div {
+    width: 100%;
+  }
+  .login .login-header {
+    width: 100%;
+  }
+  .login .login-form h1 {
+    padding: 0em;
+    margin-top: 1em;
+  }
+  /* Profile section */
+  .profile form .upload-product .input-fields {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .profile form .upload-product .auction {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .profile form .button-container {
+    flex-direction: column;
+  }
+  .profile form .button-container button {
+    width: 100%;
+  }
+  .profile .add-item-animation {
+    flex-direction: column;
+    height: 300px;
+  }
+  .profile .add-funds {
+    height: 500px;
+    flex-direction: column;
+  }
+  .profile #checkboxLabel {
+    font-size: 0.9em;
+  }
+  /* Single Page Product section */
+  .single-product .product-informations {
+    flex-direction: column;
+  }
+  .single-product img {
+    width: 100%;
+    height: auto;
+  }
+  .single-product p {
+    text-align: justify;
+    margin-bottom: 1em;
+  }
+  .single-product .bidding-section {
+    display: block;
+  }
+  .single-product .bidding-section input, .single-product .bidding-section button {
+    width: 100%;
+  }
+  .single-product .purchase-btn {
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,43 @@
+@mixin alert {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 0.5em;
+    text-align: center;
+    padding: 1em;
+    z-index: 3;
+    display: none;
+
+    button {
+        margin-left: 1em;
+        padding: 0.5em;
+        border: none;
+        border-radius: 0.5em;
+        margin-top: 0.5em;
+        cursor: pointer;
+    }
+
+    .cancel {
+        background-color: #FF4C4C;
+        color: white;
+    }
+
+    .confirm {
+        background-color: $green-color;
+        color: $white-color;
+    }
+}
+
+@mixin alert-overlay {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    opacity: 0.3;
+    display: none;
+}
